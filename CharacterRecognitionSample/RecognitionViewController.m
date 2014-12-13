@@ -16,9 +16,10 @@
 
 @implementation RecognitionViewController
 {
-    NSArray * imageFile;
+  NSArray * imageFile;
   int flag;
   NSInteger * count;
+  NSMutableArray *wordsArray; // ここにデータが格納される
 }
 
 @synthesize imageFilePath;
@@ -31,53 +32,14 @@ NSString * const APIKEY = @"4a55716339737974574b694f317665794f423133625273344f76
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    imageFilePath.text = @"scene_jpn.png";
 
     // 開発者ポータルから取得したAPIキーの設定
     [AuthApiKey initializeAuth:APIKEY];
-    
-    imageFile = [NSArray arrayWithObjects:@"scene_jpn.png", @"scene_eng.png", @"scene_jpn.jpg", @"scene_eng.jpg", @"line_jpn.png", nil];
+    // Initialize
     jobidstr=@"";
-  
-  flag = 0;
-}
-- (IBAction)doSelectImage:(id)sender {
-    UIActionSheet *as = [[UIActionSheet alloc] init];
-    as.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
-    as.delegate = self;
-    as.title = @"画像選択";
-    [as addButtonWithTitle: [imageFile objectAtIndex:0]];
-    [as addButtonWithTitle: [imageFile objectAtIndex:1]];
-    [as addButtonWithTitle: [imageFile objectAtIndex:2]];
-    [as addButtonWithTitle: [imageFile objectAtIndex:3]];
-    [as addButtonWithTitle: [imageFile objectAtIndex:4]];
-    [as showInView:self.view];
-    
+    flag = 0;
 }
 
--(void)actionSheet:(UIActionSheet*)actionSheet
-clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    imageFilePath.text = [imageFile objectAtIndex:buttonIndex];
-    
-    NSRange searchResult = [imageFilePath.text rangeOfString:@"jpn"];
-    if(searchResult.location == NSNotFound){
-        langSelect.selectedSegmentIndex=1;
-    }
-    else {
-        langSelect.selectedSegmentIndex=0;
-    }
-
-}
-
-- (void) textViewDidChange: (UITextView*) textView {
-    // 改行を入力したらソフトウェアキーボードを閉じる
-    NSRange searchResult = [imageFilePath.text rangeOfString:@"\n"];
-    if (searchResult.location != NSNotFound) {
-        imageFilePath.text = [imageFilePath.text stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-        [imageFilePath resignFirstResponder];
-    }
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -85,19 +47,29 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)buttonPushed:(id)sender {
+  NSLog(@"%@", wordsArray);
+}
+
+
+
 /**
- 情景画像文字認識要求送信
+ 情景画像文字認識要求送信（こいつがおおもとのメソッド）
  */
 // - (IBAction)buttonPushed:(id)sender {
--(void)sendCharacterRecognitionRequest:(UIImage *)image
-{
+- (IBAction)doRecognition:(id)sender {
+// -(void)sendCharacterRecognitionRequest:(UIImage *)image
+// -(void)sendCharacterRecognitionRequest
+// {
   flag=1;
     // 認識要求処理リクエストデータクラスを作成してパラメータをセットする
     CharacterRecognitionRequestParam * requestParam = [[CharacterRecognitionRequestParam alloc] init];
     requestParam.lang = @"jpn";
-    // requestParam.filePath = imageFilePath.text;
-    // requestParam.imageData = [UIImage imageNamed:requestParam.filePath];
-    requestParam.imageData = image;
+    // requestParam.imageData = image;
+    imageFilePath.text = @"scene_jpn.jpg";
+    requestParam.filePath = imageFilePath.text;
+    requestParam.imageData = [UIImage imageNamed:requestParam.filePath];
     result.text = @"";
     // 認識要求処理クラスを作成
     SceneCharacterRecognition * recognition = [[SceneCharacterRecognition alloc] init];
@@ -169,7 +141,6 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
  */
 -(NSMutableArray *)onComplete:(CharacterRecognitionResultData *)resultData
 {
-  count = count + 1;
   if (flag==1) {
   CharacterRecognitionStatusData *statusData = resultData;
     NSString *text = @"";
@@ -246,23 +217,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
         [self sendCharacterRecognitionJobInfoRequest:resultData.job.id];
         return NULL;
     }
-    NSMutableArray *wordsArray = [NSMutableArray array];
+    // NSMutableArray *wordsArray = [NSMutableArray array];
     wordsArray = [[NSMutableArray alloc] init];
     if ([@"success" isEqualToString: resultData.job.status] ) {
-      text = [NSMutableString stringWithFormat:@"%@抽出した全ての単語の情報の出力\n", text];
-      text = [NSMutableString stringWithFormat:@"%@抽出した全ての単語の情報の数：%@\n", text, resultData.words.count];
       for (CharacterRecognitionWordData * word in resultData.words.word) {
-        text = [NSMutableString stringWithFormat:@"%@　単語情報の出力：\n", text];
-        text = [NSMutableString stringWithFormat:@"%@　　単語の文字列：%@\n", text, word.text];
-        // [wordsArray addObject:word.text];
-        text = [NSMutableString stringWithFormat:@"%@　　単語のスコア：%@\n", text, word.score];
-        text = [NSMutableString stringWithFormat:@"%@　　単語のカテゴリ：%@\n", text, word.category];
-        text = [NSMutableString stringWithFormat:@"%@　　単語領域形状の出力：\n", text];
-        text = [NSMutableString stringWithFormat:@"%@　　　頂点の数：%d\n", text, (int)word.shape.count];
-        text = [NSMutableString stringWithFormat:@"%@　　　頂点情報の出力：\n", text];
         NSMutableArray *points = [NSMutableArray array];
         for (CharacterRecognitionPointData * point in word.shape.point) {
-            text = [NSMutableString stringWithFormat:@"%@　　　x座標, y座標(ピクセル単位)：%d, %d\n", text, (int)point.x, (int)point.y];
           NSNumber *pointx = [NSNumber numberWithInt:(int)point.x];
           NSNumber *pointy = [NSNumber numberWithInt:(int)point.y];
           [points addObject:pointx];
@@ -284,8 +244,6 @@ clickedButtonAtIndex:(NSInteger)buttonIndex
     if ( ![resultData.message.text isEqual:[NSNull null]]) {
         text = [NSMutableString stringWithFormat:@"%@エラーメッセージ：%@\n", text, resultData.message.text];
     }
-    result.text = text;
-    // NSLog([wordsArray[0] objectForKey:@"l1"]);
     NSLog(@"%@", wordsArray);
     flag = 0;
     return wordsArray;
