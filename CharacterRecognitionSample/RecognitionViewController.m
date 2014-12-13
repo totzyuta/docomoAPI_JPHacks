@@ -23,8 +23,6 @@
 }
 
 @synthesize imageFilePath;
-@synthesize langSelect;
-@synthesize result;
 @synthesize jobidstr;
 
 NSString * const APIKEY = @"4a55716339737974574b694f317665794f423133625273344f766b4f73516e71344f62755052794f436139";
@@ -57,20 +55,14 @@ NSString * const APIKEY = @"4a55716339737974574b694f317665794f423133625273344f76
 /**
  情景画像文字認識要求送信（こいつがおおもとのメソッド）
  */
-// - (IBAction)buttonPushed:(id)sender {
-- (IBAction)doRecognition:(id)sender {
-// -(void)sendCharacterRecognitionRequest:(UIImage *)image
-// -(void)sendCharacterRecognitionRequest
-// {
+-(void)sendCharacterRecognitionRequest:(UIImage *)image
+{
   flag=1;
     // 認識要求処理リクエストデータクラスを作成してパラメータをセットする
     CharacterRecognitionRequestParam * requestParam = [[CharacterRecognitionRequestParam alloc] init];
     requestParam.lang = @"jpn";
-    // requestParam.imageData = image;
-    imageFilePath.text = @"scene_jpn.jpg";
-    requestParam.filePath = imageFilePath.text;
-    requestParam.imageData = [UIImage imageNamed:requestParam.filePath];
-    result.text = @"";
+    // set image
+    requestParam.imageData = image;
     // 認識要求処理クラスを作成
     SceneCharacterRecognition * recognition = [[SceneCharacterRecognition alloc] init];
     recognition.timeoutInterval=300.0;
@@ -106,7 +98,6 @@ NSString * const APIKEY = @"4a55716339737974574b694f317665794f423133625273344f76
              otherButtonTitles:@"OK", nil
              ];
     [alert show];
-    result.text = @"";
 }
 
 /**
@@ -120,7 +111,6 @@ NSString * const APIKEY = @"4a55716339737974574b694f317665794f423133625273344f76
     
     // 認識結果取得処理クラスを作成
     SceneCharacterRecognition * recognition = [[SceneCharacterRecognition alloc] init];
-    result.text = @"";
     // 認識処理クラス　状態取得メソッドにリクエストデータ
     CharacterRecognitionError *err =
     [recognition getResult:requestParam
@@ -159,7 +149,6 @@ NSString * const APIKEY = @"4a55716339737974574b694f317665794f423133625273344f76
                  otherButtonTitles:@"OK", nil
                  ];
         [alert show];
-        result.text = text;
         return NULL;
         
     }
@@ -173,7 +162,6 @@ NSString * const APIKEY = @"4a55716339737974574b694f317665794f423133625273344f76
         text = [NSString stringWithFormat:@"%@処理受付時刻=%@\n", text, statusData.job.queue_time];
     }
     
-    result.text = text;
     if (statusData.job.id && ![statusData.job.id isEqual:[NSNull null]]){
             jobidstr = statusData.job.id;
     }
@@ -182,7 +170,6 @@ NSString * const APIKEY = @"4a55716339737974574b694f317665794f423133625273344f76
     flag = 2;
   }else if(flag==2){
   
-    result.text = @"";
     NSString *text = @"";
     if ( resultData.message.sdkError ) {
         UIAlertView *alert;
@@ -196,7 +183,6 @@ NSString * const APIKEY = @"4a55716339737974574b694f317665794f423133625273344f76
                  otherButtonTitles:@"OK", nil
                  ];
         [alert show];
-        result.text = @"";
         return NULL;
     }
     if ( resultData.message.text ) {

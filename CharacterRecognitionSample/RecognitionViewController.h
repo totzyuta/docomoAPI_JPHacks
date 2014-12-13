@@ -9,8 +9,6 @@
 @interface RecognitionViewController : UIViewController <UITextViewDelegate, UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *imageFilePath;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *langSelect;
-@property (weak, nonatomic) IBOutlet UITextView *result;
 @property NSString * jobidstr;
 
 @end

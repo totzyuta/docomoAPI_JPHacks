@@ -22,14 +22,11 @@
 		67C97043193D64B20094105F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C97041193D64B20094105F /* Main_iPhone.storyboard */; };
 		67C97046193D64B20094105F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C97044193D64B20094105F /* Main_iPad.storyboard */; };
 		67C97049193D64B20094105F /* RecognitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C97048193D64B20094105F /* RecognitionViewController.m */; };
-		67C9704C193D64B20094105F /* GetResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C9704B193D64B20094105F /* GetResultViewController.m */; };
 		67C9704E193D64B20094105F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C9704D193D64B20094105F /* Images.xcassets */; };
 		67C97055193D64B20094105F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C97054193D64B20094105F /* XCTest.framework */; };
 		67C97056193D64B20094105F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C9702F193D64B20094105F /* Foundation.framework */; };
 		67C97057193D64B20094105F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C97033193D64B20094105F /* UIKit.framework */; };
 		67C9705F193D64B20094105F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67C9705D193D64B20094105F /* InfoPlist.strings */; };
-		67C9706C193D69760094105F /* DeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C9706B193D69760094105F /* DeleteViewController.m */; };
-		67C9706F193D69C60094105F /* LineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C9706E193D69C60094105F /* LineViewController.m */; };
 		67E954C21947357100E8C0FE /* line_eng.gif in Resources */ = {isa = PBXBuildFile; fileRef = 67E954C11947357100E8C0FE /* line_eng.gif */; };
 		67E954C41947358100E8C0FE /* scene_eng.gif in Resources */ = {isa = PBXBuildFile; fileRef = 67E954C31947358100E8C0FE /* scene_eng.gif */; };
 		67F9A8B019419E3B00DF56F0 /* scene_eng.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 67F9A8AC19419E3B00DF56F0 /* scene_eng.jpg */; };
@@ -84,17 +81,11 @@
 		67C97045193D64B20094105F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		67C97047193D64B20094105F /* RecognitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecognitionViewController.h; sourceTree = "<group>"; };
 		67C97048193D64B20094105F /* RecognitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecognitionViewController.m; sourceTree = "<group>"; };
-		67C9704A193D64B20094105F /* GetResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetResultViewController.h; sourceTree = "<group>"; };
-		67C9704B193D64B20094105F /* GetResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetResultViewController.m; sourceTree = "<group>"; };
 		67C9704D193D64B20094105F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		67C97053193D64B20094105F /* CharacterRecognitionSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharacterRecognitionSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C97054193D64B20094105F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		67C9705C193D64B20094105F /* CharacterRecognitionSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CharacterRecognitionSampleTests-Info.plist"; sourceTree = "<group>"; };
 		67C9705E193D64B20094105F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		67C9706A193D69760094105F /* DeleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteViewController.h; sourceTree = "<group>"; };
-		67C9706B193D69760094105F /* DeleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteViewController.m; sourceTree = "<group>"; };
-		67C9706D193D69C60094105F /* LineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineViewController.h; sourceTree = "<group>"; };
-		67C9706E193D69C60094105F /* LineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineViewController.m; sourceTree = "<group>"; };
 		67E954C11947357100E8C0FE /* line_eng.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = line_eng.gif; sourceTree = "<group>"; };
 		67E954C31947358100E8C0FE /* scene_eng.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = scene_eng.gif; sourceTree = "<group>"; };
 		67F9A8AC19419E3B00DF56F0 /* scene_eng.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scene_eng.jpg; sourceTree = "<group>"; };
@@ -219,12 +210,6 @@
 				67C97044193D64B20094105F /* Main_iPad.storyboard */,
 				67C97047193D64B20094105F /* RecognitionViewController.h */,
 				67C97048193D64B20094105F /* RecognitionViewController.m */,
-				67C9704A193D64B20094105F /* GetResultViewController.h */,
-				67C9704B193D64B20094105F /* GetResultViewController.m */,
-				67C9706A193D69760094105F /* DeleteViewController.h */,
-				67C9706B193D69760094105F /* DeleteViewController.m */,
-				67C9706D193D69C60094105F /* LineViewController.h */,
-				67C9706E193D69C60094105F /* LineViewController.m */,
 				67C9704D193D64B20094105F /* Images.xcassets */,
 				67C97036193D64B20094105F /* Supporting Files */,
 			);
@@ -367,12 +352,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67C9704C193D64B20094105F /* GetResultViewController.m in Sources */,
 				67C97040193D64B20094105F /* AppDelegate.m in Sources */,
-				67C9706F193D69C60094105F /* LineViewController.m in Sources */,
 				67C97049193D64B20094105F /* RecognitionViewController.m in Sources */,
 				67C9703C193D64B20094105F /* main.m in Sources */,
-				67C9706C193D69760094105F /* DeleteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
