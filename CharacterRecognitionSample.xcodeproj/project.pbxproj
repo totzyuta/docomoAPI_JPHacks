@@ -1,0 +1,644 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11A6B2FC19E295750037590E /* libdocomo-characterrecognition-ios-sdk-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A6B2FA19E295750037590E /* libdocomo-characterrecognition-ios-sdk-1.0.0.a */; };
+		11A6B2FD19E295750037590E /* libdocomo-common-ios-sdk-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A6B2FB19E295750037590E /* libdocomo-common-ios-sdk-1.0.0.a */; };
+		671C35391940993E001B7FA9 /* scene_eng.png in Resources */ = {isa = PBXBuildFile; fileRef = 671C35351940993E001B7FA9 /* scene_eng.png */; };
+		671C353B1940993E001B7FA9 /* line_eng.png in Resources */ = {isa = PBXBuildFile; fileRef = 671C35371940993E001B7FA9 /* line_eng.png */; };
+		671C353F19409E77001B7FA9 /* scene_jpn.png in Resources */ = {isa = PBXBuildFile; fileRef = 671C353D19409E77001B7FA9 /* scene_jpn.png */; };
+		671C354019409E77001B7FA9 /* line_jpn.png in Resources */ = {isa = PBXBuildFile; fileRef = 671C353E19409E77001B7FA9 /* line_jpn.png */; };
+		67C97030193D64B20094105F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C9702F193D64B20094105F /* Foundation.framework */; };
+		67C97032193D64B20094105F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C97031193D64B20094105F /* CoreGraphics.framework */; };
+		67C97034193D64B20094105F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C97033193D64B20094105F /* UIKit.framework */; };
+		67C9703A193D64B20094105F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67C97038193D64B20094105F /* InfoPlist.strings */; };
+		67C9703C193D64B20094105F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C9703B193D64B20094105F /* main.m */; };
+		67C97040193D64B20094105F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C9703F193D64B20094105F /* AppDelegate.m */; };
+		67C97043193D64B20094105F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C97041193D64B20094105F /* Main_iPhone.storyboard */; };
+		67C97046193D64B20094105F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C97044193D64B20094105F /* Main_iPad.storyboard */; };
+		67C97049193D64B20094105F /* RecognitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C97048193D64B20094105F /* RecognitionViewController.m */; };
+		67C9704C193D64B20094105F /* GetResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C9704B193D64B20094105F /* GetResultViewController.m */; };
+		67C9704E193D64B20094105F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C9704D193D64B20094105F /* Images.xcassets */; };
+		67C97055193D64B20094105F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C97054193D64B20094105F /* XCTest.framework */; };
+		67C97056193D64B20094105F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C9702F193D64B20094105F /* Foundation.framework */; };
+		67C97057193D64B20094105F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67C97033193D64B20094105F /* UIKit.framework */; };
+		67C9705F193D64B20094105F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67C9705D193D64B20094105F /* InfoPlist.strings */; };
+		67C9706C193D69760094105F /* DeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C9706B193D69760094105F /* DeleteViewController.m */; };
+		67C9706F193D69C60094105F /* LineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C9706E193D69C60094105F /* LineViewController.m */; };
+		67E954C21947357100E8C0FE /* line_eng.gif in Resources */ = {isa = PBXBuildFile; fileRef = 67E954C11947357100E8C0FE /* line_eng.gif */; };
+		67E954C41947358100E8C0FE /* scene_eng.gif in Resources */ = {isa = PBXBuildFile; fileRef = 67E954C31947358100E8C0FE /* scene_eng.gif */; };
+		67F9A8B019419E3B00DF56F0 /* scene_eng.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 67F9A8AC19419E3B00DF56F0 /* scene_eng.jpg */; };
+		67F9A8B119419E3B00DF56F0 /* scene_jpn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 67F9A8AD19419E3B00DF56F0 /* scene_jpn.jpg */; };
+		67F9A8B219419E3B00DF56F0 /* line_eng.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 67F9A8AE19419E3B00DF56F0 /* line_eng.jpg */; };
+		67F9A8B319419E3B00DF56F0 /* line_jpn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 67F9A8AF19419E3B00DF56F0 /* line_jpn.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67C97058193D64B20094105F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67C97024193D64B20094105F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67C9702B193D64B20094105F;
+			remoteInfo = CharacterRecognitionSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11A6B2EA19E295750037590E /* AuthApiKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthApiKey.h; sourceTree = "<group>"; };
+		11A6B2EB19E295750037590E /* CharacterRecognitionError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterRecognitionError.h; sourceTree = "<group>"; };
+		11A6B2EC19E295750037590E /* CharacterRecognitionJobData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterRecognitionJobData.h; sourceTree = "<group>"; };
+		11A6B2ED19E295750037590E /* CharacterRecognitionJobInfoRequestParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterRecognitionJobInfoRequestParam.h; sourceTree = "<group>"; };
+		11A6B2EE19E295750037590E /* CharacterRecognitionMessageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterRecognitionMessageData.h; sourceTree = "<group>"; };
+		11A6B2EF19E295750037590E /* CharacterRecognitionPointData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterRecognitionPointData.h; sourceTree = "<group>"; };
+		11A6B2F019E295750037590E /* CharacterRecognitionRequestParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterRecognitionRequestParam.h; sourceTree = "<group>"; };
+		11A6B2F119E295750037590E /* CharacterRecognitionResultData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterRecognitionResultData.h; sourceTree = "<group>"; };
+		11A6B2F219E295750037590E /* CharacterRecognitionShapeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterRecognitionShapeData.h; sourceTree = "<group>"; };
+		11A6B2F319E295750037590E /* CharacterRecognitionStatusData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterRecognitionStatusData.h; sourceTree = "<group>"; };
+		11A6B2F419E295750037590E /* CharacterRecognitionWordData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterRecognitionWordData.h; sourceTree = "<group>"; };
+		11A6B2F519E295750037590E /* CharacterRecognitionWordsData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterRecognitionWordsData.h; sourceTree = "<group>"; };
+		11A6B2F619E295750037590E /* LineCharacterRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineCharacterRecognition.h; sourceTree = "<group>"; };
+		11A6B2F719E295750037590E /* SceneCharacterRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneCharacterRecognition.h; sourceTree = "<group>"; };
+		11A6B2F819E295750037590E /* SdkError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SdkError.h; sourceTree = "<group>"; };
+		11A6B2FA19E295750037590E /* libdocomo-characterrecognition-ios-sdk-1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libdocomo-characterrecognition-ios-sdk-1.0.0.a"; sourceTree = "<group>"; };
+		11A6B2FB19E295750037590E /* libdocomo-common-ios-sdk-1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libdocomo-common-ios-sdk-1.0.0.a"; sourceTree = "<group>"; };
+		671C35351940993E001B7FA9 /* scene_eng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scene_eng.png; sourceTree = "<group>"; };
+		671C35371940993E001B7FA9 /* line_eng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_eng.png; sourceTree = "<group>"; };
+		671C353D19409E77001B7FA9 /* scene_jpn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scene_jpn.png; sourceTree = "<group>"; };
+		671C353E19409E77001B7FA9 /* line_jpn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_jpn.png; sourceTree = "<group>"; };
+		67C9702C193D64B20094105F /* CharacterRecognitionSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharacterRecognitionSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67C9702F193D64B20094105F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		67C97031193D64B20094105F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		67C97033193D64B20094105F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		67C97037193D64B20094105F /* CharacterRecognitionSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CharacterRecognitionSample-Info.plist"; sourceTree = "<group>"; };
+		67C97039193D64B20094105F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		67C9703B193D64B20094105F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		67C9703D193D64B20094105F /* CharacterRecognitionSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CharacterRecognitionSample-Prefix.pch"; sourceTree = "<group>"; };
+		67C9703E193D64B20094105F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		67C9703F193D64B20094105F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		67C97042193D64B20094105F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		67C97045193D64B20094105F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		67C97047193D64B20094105F /* RecognitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecognitionViewController.h; sourceTree = "<group>"; };
+		67C97048193D64B20094105F /* RecognitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecognitionViewController.m; sourceTree = "<group>"; };
+		67C9704A193D64B20094105F /* GetResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetResultViewController.h; sourceTree = "<group>"; };
+		67C9704B193D64B20094105F /* GetResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetResultViewController.m; sourceTree = "<group>"; };
+		67C9704D193D64B20094105F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		67C97053193D64B20094105F /* CharacterRecognitionSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CharacterRecognitionSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67C97054193D64B20094105F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		67C9705C193D64B20094105F /* CharacterRecognitionSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CharacterRecognitionSampleTests-Info.plist"; sourceTree = "<group>"; };
+		67C9705E193D64B20094105F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		67C9706A193D69760094105F /* DeleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteViewController.h; sourceTree = "<group>"; };
+		67C9706B193D69760094105F /* DeleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteViewController.m; sourceTree = "<group>"; };
+		67C9706D193D69C60094105F /* LineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineViewController.h; sourceTree = "<group>"; };
+		67C9706E193D69C60094105F /* LineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineViewController.m; sourceTree = "<group>"; };
+		67E954C11947357100E8C0FE /* line_eng.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = line_eng.gif; sourceTree = "<group>"; };
+		67E954C31947358100E8C0FE /* scene_eng.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = scene_eng.gif; sourceTree = "<group>"; };
+		67F9A8AC19419E3B00DF56F0 /* scene_eng.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scene_eng.jpg; sourceTree = "<group>"; };
+		67F9A8AD19419E3B00DF56F0 /* scene_jpn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scene_jpn.jpg; sourceTree = "<group>"; };
+		67F9A8AE19419E3B00DF56F0 /* line_eng.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = line_eng.jpg; sourceTree = "<group>"; };
+		67F9A8AF19419E3B00DF56F0 /* line_jpn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = line_jpn.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67C97029193D64B20094105F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67C97032193D64B20094105F /* CoreGraphics.framework in Frameworks */,
+				11A6B2FD19E295750037590E /* libdocomo-common-ios-sdk-1.0.0.a in Frameworks */,
+				11A6B2FC19E295750037590E /* libdocomo-characterrecognition-ios-sdk-1.0.0.a in Frameworks */,
+				67C97034193D64B20094105F /* UIKit.framework in Frameworks */,
+				67C97030193D64B20094105F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67C97050193D64B20094105F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67C97055193D64B20094105F /* XCTest.framework in Frameworks */,
+				67C97057193D64B20094105F /* UIKit.framework in Frameworks */,
+				67C97056193D64B20094105F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11A6B2E919E295750037590E /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				11A6B2EA19E295750037590E /* AuthApiKey.h */,
+				11A6B2EB19E295750037590E /* CharacterRecognitionError.h */,
+				11A6B2EC19E295750037590E /* CharacterRecognitionJobData.h */,
+				11A6B2ED19E295750037590E /* CharacterRecognitionJobInfoRequestParam.h */,
+				11A6B2EE19E295750037590E /* CharacterRecognitionMessageData.h */,
+				11A6B2EF19E295750037590E /* CharacterRecognitionPointData.h */,
+				11A6B2F019E295750037590E /* CharacterRecognitionRequestParam.h */,
+				11A6B2F119E295750037590E /* CharacterRecognitionResultData.h */,
+				11A6B2F219E295750037590E /* CharacterRecognitionShapeData.h */,
+				11A6B2F319E295750037590E /* CharacterRecognitionStatusData.h */,
+				11A6B2F419E295750037590E /* CharacterRecognitionWordData.h */,
+				11A6B2F519E295750037590E /* CharacterRecognitionWordsData.h */,
+				11A6B2F619E295750037590E /* LineCharacterRecognition.h */,
+				11A6B2F719E295750037590E /* SceneCharacterRecognition.h */,
+				11A6B2F819E295750037590E /* SdkError.h */,
+			);
+			path = inc;
+			sourceTree = "<group>";
+		};
+		11A6B2F919E295750037590E /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				11A6B2FA19E295750037590E /* libdocomo-characterrecognition-ios-sdk-1.0.0.a */,
+				11A6B2FB19E295750037590E /* libdocomo-common-ios-sdk-1.0.0.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		671C352419406A46001B7FA9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				67F9A8AC19419E3B00DF56F0 /* scene_eng.jpg */,
+				67F9A8AD19419E3B00DF56F0 /* scene_jpn.jpg */,
+				671C35351940993E001B7FA9 /* scene_eng.png */,
+				671C353D19409E77001B7FA9 /* scene_jpn.png */,
+				67E954C31947358100E8C0FE /* scene_eng.gif */,
+				67F9A8AE19419E3B00DF56F0 /* line_eng.jpg */,
+				67F9A8AF19419E3B00DF56F0 /* line_jpn.jpg */,
+				671C353E19409E77001B7FA9 /* line_jpn.png */,
+				671C35371940993E001B7FA9 /* line_eng.png */,
+				67E954C11947357100E8C0FE /* line_eng.gif */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		67C97023193D64B20094105F = {
+			isa = PBXGroup;
+			children = (
+				671C352419406A46001B7FA9 /* Resources */,
+				67C97035193D64B20094105F /* CharacterRecognitionSample */,
+				67C9705A193D64B20094105F /* CharacterRecognitionSampleTests */,
+				67C9702E193D64B20094105F /* Frameworks */,
+				67C9702D193D64B20094105F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67C9702D193D64B20094105F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67C9702C193D64B20094105F /* CharacterRecognitionSample.app */,
+				67C97053193D64B20094105F /* CharacterRecognitionSampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67C9702E193D64B20094105F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11A6B2E919E295750037590E /* inc */,
+				11A6B2F919E295750037590E /* lib */,
+				67C9702F193D64B20094105F /* Foundation.framework */,
+				67C97031193D64B20094105F /* CoreGraphics.framework */,
+				67C97033193D64B20094105F /* UIKit.framework */,
+				67C97054193D64B20094105F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		67C97035193D64B20094105F /* CharacterRecognitionSample */ = {
+			isa = PBXGroup;
+			children = (
+				67C9703E193D64B20094105F /* AppDelegate.h */,
+				67C9703F193D64B20094105F /* AppDelegate.m */,
+				67C97041193D64B20094105F /* Main_iPhone.storyboard */,
+				67C97044193D64B20094105F /* Main_iPad.storyboard */,
+				67C97047193D64B20094105F /* RecognitionViewController.h */,
+				67C97048193D64B20094105F /* RecognitionViewController.m */,
+				67C9704A193D64B20094105F /* GetResultViewController.h */,
+				67C9704B193D64B20094105F /* GetResultViewController.m */,
+				67C9706A193D69760094105F /* DeleteViewController.h */,
+				67C9706B193D69760094105F /* DeleteViewController.m */,
+				67C9706D193D69C60094105F /* LineViewController.h */,
+				67C9706E193D69C60094105F /* LineViewController.m */,
+				67C9704D193D64B20094105F /* Images.xcassets */,
+				67C97036193D64B20094105F /* Supporting Files */,
+			);
+			path = CharacterRecognitionSample;
+			sourceTree = "<group>";
+		};
+		67C97036193D64B20094105F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				67C97037193D64B20094105F /* CharacterRecognitionSample-Info.plist */,
+				67C97038193D64B20094105F /* InfoPlist.strings */,
+				67C9703B193D64B20094105F /* main.m */,
+				67C9703D193D64B20094105F /* CharacterRecognitionSample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		67C9705A193D64B20094105F /* CharacterRecognitionSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				67C9705B193D64B20094105F /* Supporting Files */,
+			);
+			path = CharacterRecognitionSampleTests;
+			sourceTree = "<group>";
+		};
+		67C9705B193D64B20094105F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				67C9705C193D64B20094105F /* CharacterRecognitionSampleTests-Info.plist */,
+				67C9705D193D64B20094105F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67C9702B193D64B20094105F /* CharacterRecognitionSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67C97064193D64B20094105F /* Build configuration list for PBXNativeTarget "CharacterRecognitionSample" */;
+			buildPhases = (
+				67C97028193D64B20094105F /* Sources */,
+				67C97029193D64B20094105F /* Frameworks */,
+				67C9702A193D64B20094105F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CharacterRecognitionSample;
+			productName = CharacterRecognitionSample;
+			productReference = 67C9702C193D64B20094105F /* CharacterRecognitionSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		67C97052193D64B20094105F /* CharacterRecognitionSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67C97067193D64B20094105F /* Build configuration list for PBXNativeTarget "CharacterRecognitionSampleTests" */;
+			buildPhases = (
+				67C9704F193D64B20094105F /* Sources */,
+				67C97050193D64B20094105F /* Frameworks */,
+				67C97051193D64B20094105F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				67C97059193D64B20094105F /* PBXTargetDependency */,
+			);
+			name = CharacterRecognitionSampleTests;
+			productName = CharacterRecognitionSampleTests;
+			productReference = 67C97053193D64B20094105F /* CharacterRecognitionSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67C97024193D64B20094105F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = smt;
+				TargetAttributes = {
+					67C97052193D64B20094105F = {
+						TestTargetID = 67C9702B193D64B20094105F;
+					};
+				};
+			};
+			buildConfigurationList = 67C97027193D64B20094105F /* Build configuration list for PBXProject "CharacterRecognitionSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67C97023193D64B20094105F;
+			productRefGroup = 67C9702D193D64B20094105F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67C9702B193D64B20094105F /* CharacterRecognitionSample */,
+				67C97052193D64B20094105F /* CharacterRecognitionSampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		67C9702A193D64B20094105F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67C97046193D64B20094105F /* Main_iPad.storyboard in Resources */,
+				671C353F19409E77001B7FA9 /* scene_jpn.png in Resources */,
+				67E954C21947357100E8C0FE /* line_eng.gif in Resources */,
+				67F9A8B019419E3B00DF56F0 /* scene_eng.jpg in Resources */,
+				671C35391940993E001B7FA9 /* scene_eng.png in Resources */,
+				67F9A8B119419E3B00DF56F0 /* scene_jpn.jpg in Resources */,
+				671C353B1940993E001B7FA9 /* line_eng.png in Resources */,
+				67F9A8B219419E3B00DF56F0 /* line_eng.jpg in Resources */,
+				67E954C41947358100E8C0FE /* scene_eng.gif in Resources */,
+				67C9704E193D64B20094105F /* Images.xcassets in Resources */,
+				67C97043193D64B20094105F /* Main_iPhone.storyboard in Resources */,
+				671C354019409E77001B7FA9 /* line_jpn.png in Resources */,
+				67F9A8B319419E3B00DF56F0 /* line_jpn.jpg in Resources */,
+				67C9703A193D64B20094105F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67C97051193D64B20094105F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67C9705F193D64B20094105F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67C97028193D64B20094105F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67C9704C193D64B20094105F /* GetResultViewController.m in Sources */,
+				67C97040193D64B20094105F /* AppDelegate.m in Sources */,
+				67C9706F193D69C60094105F /* LineViewController.m in Sources */,
+				67C97049193D64B20094105F /* RecognitionViewController.m in Sources */,
+				67C9703C193D64B20094105F /* main.m in Sources */,
+				67C9706C193D69760094105F /* DeleteViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67C9704F193D64B20094105F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67C97059193D64B20094105F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67C9702B193D64B20094105F /* CharacterRecognitionSample */;
+			targetProxy = 67C97058193D64B20094105F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		67C97038193D64B20094105F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67C97039193D64B20094105F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		67C97041193D64B20094105F /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67C97042193D64B20094105F /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		67C97044193D64B20094105F /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67C97045193D64B20094105F /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		67C9705D193D64B20094105F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				67C9705E193D64B20094105F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		67C97062193D64B20094105F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "DDBD31BC-F3AF-468A-B5BF-F057674972E5";
+				SDKROOT = iphoneos7.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		67C97063193D64B20094105F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE = "DDBD31BC-F3AF-468A-B5BF-F057674972E5";
+				SDKROOT = iphoneos7.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67C97065193D64B20094105F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CharacterRecognitionSample/CharacterRecognitionSample-Prefix.pch";
+				INFOPLIST_FILE = "CharacterRecognitionSample/CharacterRecognitionSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Users/y-kuchiishi/Desktop/ios_sdk/lib",
+					/Users/docomo/Desktop/ios_sdk/lib,
+					"$(PROJECT_DIR)/lib",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos7.0;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		67C97066193D64B20094105F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CharacterRecognitionSample/CharacterRecognitionSample-Prefix.pch";
+				INFOPLIST_FILE = "CharacterRecognitionSample/CharacterRecognitionSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"/Users/y-kuchiishi/Desktop/ios_sdk/lib",
+					/Users/docomo/Desktop/ios_sdk/lib,
+					"$(PROJECT_DIR)/lib",
+				);
+				OTHER_LDFLAGS = "";
+				"OTHER_LDFLAGS[arch=*]" = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos7.0;
+				"SDKROOT[arch=*]" = iphoneos7.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		67C97068193D64B20094105F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CharacterRecognitionSample.app/CharacterRecognitionSample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CharacterRecognitionSample/CharacterRecognitionSample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CharacterRecognitionSampleTests/CharacterRecognitionSampleTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		67C97069193D64B20094105F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CharacterRecognitionSample.app/CharacterRecognitionSample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CharacterRecognitionSample/CharacterRecognitionSample-Prefix.pch";
+				INFOPLIST_FILE = "CharacterRecognitionSampleTests/CharacterRecognitionSampleTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67C97027193D64B20094105F /* Build configuration list for PBXProject "CharacterRecognitionSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67C97062193D64B20094105F /* Debug */,
+				67C97063193D64B20094105F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67C97064193D64B20094105F /* Build configuration list for PBXNativeTarget "CharacterRecognitionSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67C97065193D64B20094105F /* Debug */,
+				67C97066193D64B20094105F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67C97067193D64B20094105F /* Build configuration list for PBXNativeTarget "CharacterRecognitionSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67C97068193D64B20094105F /* Debug */,
+				67C97069193D64B20094105F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67C97024193D64B20094105F /* Project object */;
+}
